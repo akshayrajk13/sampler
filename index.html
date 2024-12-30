@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sampler</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sampler">
+        <div class="grid" data-sound="./sounds/kick.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/snare.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/hihat_closed.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/tom_low.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/hihat_open.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/tom_high.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/crash.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/ride.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+        <div class="grid" data-sound="./sounds/clap.wav">
+          <div class="file-upload-container">
+            <label class="file-label">
+              <span>Upload File</span>
+              <input type="file" accept="audio/*" class="file-upload" />
+            </label>
+            <span class="file-name">No file selected</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            class="grid-volume"
+          />
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="settings">
+          <div class="eq">
+            <div class="band">
+              <label for="low">Low</label>
+              <input
+                type="range"
+                min="-10"
+                max="10"
+                value="0"
+                name="low"
+                id="low"
+              />
+            </div>
+            <div class="band">
+              <label for="mid">Mid</label>
+              <input
+                type="range"
+                min="-10"
+                max="10"
+                value="0"
+                name="mid"
+                id="mid"
+              />
+            </div>
+            <div class="band">
+              <label for="high">High</label>
+              <input
+                type="range"
+                min="-10"
+                max="10"
+                value="0"
+                name="high"
+                id="high"
+              />
+            </div>
+          </div>
+          <div class="fx">
+            <label for="reverb">Reverb</label>
+            <input
+              type="range"
+              min="0"
+              max="10"
+              value="0"
+              name="reverb"
+              id="reverb"
+            />
+          </div>
+          <div class="output">
+            <label for="volume">Master Volume</label>
+            <input
+              type="range"
+              min="0"
+              max="10"
+              value="5"
+              name="volume"
+              id="volume"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

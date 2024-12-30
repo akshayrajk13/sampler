@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: aliceblue;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ff9800;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .navbar-links.show {
+    display: block;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links li {
+    margin: 1rem 0;
+  }
+}
+
+/* Main Content */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+.sampler {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex: 2;
+  margin-right: 2rem;
+}
+
+.grid {
+  background-color: #d0eaff;
+  border: 1px solid #98cffc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.grid:hover {
+  background-color: #cbe5ff;
+  border-color: #0078d7;
+}
+
+.grid .file-upload-container {
+  margin-bottom: 1rem;
+}
+
+.file-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #b0d7ff;
+  border: 1px solid #98cffc;
+  border-radius: 8px;
+}
+
+.file-upload {
+  display: none;
+}
+
+.file-name {
+  display: block;
+  margin-top: 0.5rem;
+  color: #777;
+}
+
+.grid-volume {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #d0eaff;
+  border: 1px solid #98cffc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.settings {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eq,
+.fx,
+.output {
+  background-color: #cce3de;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eq .band {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.eq .band input {
+  width: 70%;
+}
+
+.fx,
+.output {
+  margin-bottom: 1rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+label {
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Active Grid Feedback */
+.grid.active {
+  background-color: #cce3de;
+  transform: scale(1.05);
+  transition: transform 0.1s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sampler {
+    grid-template-columns: 1fr 1fr;
+    margin-right: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-text {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1b1b1b;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2b6777;
+  border-bottom: 2px solid #848484;
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #4396ac;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1rem;
+  color: #285b69;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #2b6777;
+  margin: 0.5rem 0;
+  background-color: #cce3de;
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+
+kbd {
+  border-radius: 0.25rem;
+  background-color: black;
+  color: white;
+  padding: 0.15rem 0.4rem;
+}
+
+code {
+  border-radius: 0.25rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 0.15rem 0.4rem;
+}
